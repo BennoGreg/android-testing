@@ -25,7 +25,16 @@ android {
         enabled = true
         enabledForTests = true
     }
+
+    // Always show the result of every unit test when running via command line, even if it passes.
+    testOptions.unitTests {
+        includeAndroidResources = true
+
+        // ...
+    }
+
 }
+
 
 dependencies {
 
@@ -41,6 +50,7 @@ dependencies {
 
     // Architecture Components
     implementation "androidx.room:room-runtime:$roomVersion"
+    testImplementation 'junit:junit:4.12'
     kapt "androidx.room:room-compiler:$roomVersion"
     implementation "androidx.room:room-ktx:$roomVersion"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$archLifecycleVersion"
@@ -61,4 +71,15 @@ dependencies {
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
     implementation "androidx.fragment:fragment-ktx:$fragmentKtxVersion"
+
+    testImplementation "org.hamcrest:hamcrest-all:$hamcrestVersion"
+
+    // AndroidX Test - JVM testing
+    testImplementation "androidx.test.ext:junit-ktx:$androidXTestExtKotlinRunnerVersion"
+
+    testImplementation "androidx.test:core-ktx:$androidXTestCoreVersion"
+
+    testImplementation "org.robolectric:robolectric:$robolectricVersion"
+
+    testImplementation "androidx.arch.core:core-testing:$archTestingVersion"
 }
