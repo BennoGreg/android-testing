@@ -11,4 +11,5 @@ android:
     - 'android-sdk-licence-.+'
 
 script:
+  - yes | sudo sdk-manager --licences
   - ./gradlew build
