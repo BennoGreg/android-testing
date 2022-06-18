@@ -2,11 +2,6 @@ language: android
 
 dist: trusty
 
-android:
-  components:
-  licenses:
-    - 'android-sdk-preview-license-52d11cd2'
-    - 'android-sdk-license-.+'
 
 script:
   - ./gradlew build
