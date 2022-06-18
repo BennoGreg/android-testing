@@ -6,6 +6,8 @@ android:
   components:
     - build-tools-30.0.2
     - android-30
+  licenses:
+    - android-sdk-licence
 
 script:
   - ./gradlew build
