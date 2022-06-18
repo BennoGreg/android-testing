@@ -3,7 +3,7 @@ language: android
 dist: trusty
 
 android:
-  components:gt
+  components:
     - platform-tools
     - build-tools-30.0.2
     - android-30
