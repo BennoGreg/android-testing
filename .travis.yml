@@ -2,9 +2,8 @@ language: android
 
 dist: trusty
 
-env:
-  matrix:
-    - TRAVIS_JDK=adopt-openj9@1.14
+jdk:
+  - openjdk14
 
 android:
   licenses:
@@ -22,4 +21,5 @@ before_install:
 
 
 script:
+  - jdk_switcher use openjdk14
   - ./gradlew test
