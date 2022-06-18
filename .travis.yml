@@ -4,14 +4,11 @@ dist: trusty
 
 android:
   components:
-    - platform-tools
-    - build-tools-30.0.2
-    - android-30
-    - extra
+    - build-tools;30.0.2
+    - platforms;android-30
   licenses:
     - 'android-sdk-preview-license-52d11cd2'
     - 'android-sdk-license-.+'
-    - 'google-gdk-license-.+'
 
 script:
   - ./gradlew build
