@@ -3,11 +3,19 @@ language: android
 dist: trusty
 
 android:
+  licenses:
+    - 'android-sdk-preview-license-.+'
+    - 'android-sdk-license-.+'
+    - 'google-gdk-license-.+'
   components:
+    - tools
     - build-tools-30.0.2
     - android-30
-  licenses:
-    - android-sdk-licence
+
+before_install:
+  - chmod +x gradlew
+  - yes | sdkmanager "platforms;android-30"
+
 
 script:
-  - ./gradlew build
+  - ./gradlew test
