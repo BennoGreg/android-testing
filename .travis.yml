@@ -17,8 +17,8 @@ android:
 
 before_install:
   - chmod +x gradlew
+  - yes | sdkmanager "platforms;android-30"
 
 
 script:
-  - jdk_switcher use openjdk14
   - ./gradlew test
