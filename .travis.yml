@@ -14,5 +14,4 @@ android:
     - 'google-gdk-license-.+'
 
 script:
-  - yes | sdkmanager --licences
   - ./gradlew build
