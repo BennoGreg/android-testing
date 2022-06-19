@@ -36,4 +36,4 @@ jobs:
     - stage: build
       name: "Build"
       script:
-        - ./gradlew build --assemble-debug
+        - ./gradlew assemble-debug

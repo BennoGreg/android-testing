@@ -1,6 +1,8 @@
 TO-DO Notes - Code for 5.1-5.3 Testing Codelab
 ============================================================================
 
+[![Build Status](https://app.travis-ci.com/BennoGreg/android-testing.svg?branch=TestingProjectCI)](https://app.travis-ci.com/BennoGreg/android-testing)
+
 Code for the Advanced Android Kotlin Testing Codelab 5.1-5.3
 
 Introduction
