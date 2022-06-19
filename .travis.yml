@@ -2,7 +2,6 @@ language: android
 
 dist: trusty
 
-
 android:
   licenses:
     - 'android-sdk-preview-license-.+'
@@ -17,10 +16,23 @@ before_install:
   - chmod +x gradlew
   - yes | sdkmanager "platforms;android-30"
 
-
-script:
   - wget https://github.com/sormuras/bach/raw/master/install-jdk.sh
   - chmod +x $TRAVIS_BUILD_DIR/install-jdk.sh
   - export JAVA_HOME=$HOME/openjdk14
   - $TRAVIS_BUILD_DIR/install-jdk.sh -F 14 --target $JAVA_HOME
-  - ./gradlew test
+
+jobs:
+  include:
+    - stage: test
+      name: "Unit Tests"
+      script:
+        - ./gradlew test
+    - script:
+        - echo "Entering Integration Testing"
+      name: "Integration Tests"
+    - script:
+        - echo "Entering UI-Testing
+      name: "UI Tests"
+    - stage: build
+      name: "Build"
+      script: ./build
