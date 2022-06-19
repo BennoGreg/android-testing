@@ -31,8 +31,9 @@ jobs:
         - echo "Entering Integration Testing"
       name: "Integration Tests"
     - script:
-        - echo "Entering UI-Testing
+        - echo "Entering UI-Testing"
       name: "UI Tests"
     - stage: build
       name: "Build"
-      script: ./build
+      script:
+        - ./gradlew build --assemble-debug
