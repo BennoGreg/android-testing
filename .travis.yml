@@ -2,6 +2,10 @@ language: android
 
 dist: trusty
 
+cache:
+  directories:
+    - $TRAVIS_BUILD_DIR/.gradle
+
 android:
   licenses:
     - 'android-sdk-preview-license-.+'
