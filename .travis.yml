@@ -11,7 +11,7 @@ addons:
     username: "benediktlanger_94Ay0H"
     access_key:
       secure: "E1B6hSAaWiLU/06IArFDlGpjrCd1NCX7vVtp4eVZw0xc3N0yei9+DJQGu6OwbVZyX8F44dxA691vOvno8fgnoabkAyjzQsE7HhSrMijLZpytHo+mtD+GQeplS/fqUxcLDEDZt/TuQM8NfG6sF3Nw5WNIcdb3EHQmbwzxveo93wRjUWalc1Bj9x/5uhE/5CEEDqhGKsxkmUbxzHlBCM5XKUOaLgp1C5bJWHnLzbs7MYhPYE32f4zf2z4gKdOx+ZQYmvm8YBv3XYipph92AEqVpKetoqNR+AAPFB/GwvTiLnqCOi5JU+QkyFyS2VImCWOVeURAKpat3CxHRB7B31W7CmzKygJCVrg60sAlVddwEngKamA0ylT9xRLp4ME/FKPP2SV8jfa/HdBmlV8sEK29swg4ib85/YoG1bHBkrlEJuhjtpEfCDZO8fcSFLhKEDF7sK6d56AhT9OJ3J6LShupPEiY42P/uwgtxQSuhkxVW2jskbW3C2qMCxXCyCSvd0luO9lONWYLfS1zWNholY1HNgvztSP2+j9ANStBfU0SihM4CvcfNMW3ADzf06YxrJCl4tCJj5rDCh5aAlZHEWnYFFyBritV8HyRrzJkV0WvuhWI86ABZVHfmjrOlHtMnD5kBPMMNLYqYg7qJizvkeFJRQnCnh5SFlo8siaEeVTSYE8="
-    app_path: '$TRAVIS_BUILD_DIR/app/build/outputs/apk/debug/app-debug.apk'
+    app_path: $TRAVIS_BUILD_DIR/app/build/outputs/apk/debug/app-debug.apk
 
 android:
   licenses:
@@ -40,7 +40,6 @@ jobs:
         - ./gradlew test
     - script:
         - echo "Entering Integration Testing"
-        - echo '${TRAVIS_BUILD_DIR}/app/build/outputs/apk/debug/app-debug.apk'
       name: "Integration Tests"
     - script:
         - echo "Entering UI-Testing"
