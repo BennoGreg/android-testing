@@ -40,7 +40,7 @@ jobs:
         - ./gradlew test
     - script:
         - echo "Entering Integration Testing"
-        - echo '$TRAVIS_BUILD_DIR/app/build/outputs/apk/debug/app-debug.apk'
+        - echo '${TRAVIS_BUILD_DIR}/app/build/outputs/apk/debug/app-debug.apk'
       name: "Integration Tests"
     - script:
         - echo "Entering UI-Testing"
