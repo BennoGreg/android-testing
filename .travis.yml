@@ -22,7 +22,7 @@ addons:
 #    - tools
 #    - build-tools-30.0.2
 #    - android-30
-
+#
 before_install:
 #  - chmod +x gradlew
 #  - yes | sdkmanager "platforms;android-30"
@@ -33,9 +33,9 @@ before_install:
 #  - $TRAVIS_BUILD_DIR/install-jdk.sh -F 14 --target $JAVA_HOME
 #  - npm install -g n
 #  - n 18.3.0
-#  - sudo ln -s "$(which nodejs)" /usr/bin/node
   - curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
   - sudo apt-get install nodejs
+  - sudo ln -s "$(which nodejs)" /usr/bin/node
   - node -v
 
 jobs:
