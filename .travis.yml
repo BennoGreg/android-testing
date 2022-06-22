@@ -35,7 +35,7 @@ before_install:
 #  - n 18.3.0
   - wget https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh
   - bash install.sh
-  - nvm install v18.3.0
+  - nvm install 16
   - nvm list
   - node -v
 
