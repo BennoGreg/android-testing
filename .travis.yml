@@ -10,7 +10,7 @@ addons:
   browserstack:
     username: "benediktlanger_94Ay0H"
     access_key:
-      secure: "E1B6hSAaWiLU/06IArFDlGpjrCd1NCX7vVtp4eVZw0xc3N0yei9+DJQGu6OwbVZyX8F44dxA691vOvno8fgnoabkAyjzQsE7HhSrMijLZpytHo+mtD+GQeplS/fqUxcLDEDZt/TuQM8NfG6sF3Nw5WNIcdb3EHQmbwzxveo93wRjUWalc1Bj9x/5uhE/5CEEDqhGKsxkmUbxzHlBCM5XKUOaLgp1C5bJWHnLzbs7MYhPYE32f4zf2z4gKdOx+ZQYmvm8YBv3XYipph92AEqVpKetoqNR+AAPFB/GwvTiLnqCOi5JU+QkyFyS2VImCWOVeURAKpat3CxHRB7B31W7CmzKygJCVrg60sAlVddwEngKamA0ylT9xRLp4ME/FKPP2SV8jfa/HdBmlV8sEK29swg4ib85/YoG1bHBkrlEJuhjtpEfCDZO8fcSFLhKEDF7sK6d56AhT9OJ3J6LShupPEiY42P/uwgtxQSuhkxVW2jskbW3C2qMCxXCyCSvd0luO9lONWYLfS1zWNholY1HNgvztSP2+j9ANStBfU0SihM4CvcfNMW3ADzf06YxrJCl4tCJj5rDCh5aAlZHEWnYFFyBritV8HyRrzJkV0WvuhWI86ABZVHfmjrOlHtMnD5kBPMMNLYqYg7qJizvkeFJRQnCnh5SFlo8siaEeVTSYE8="
+      secure: "DkROjGyBUnQa/uvaEl4Wi3eg5dp+ywjkeJaUU5lWj8aE5Cq0xnM/5MZHpmViflrmdI1VNXFVBXYJ8spt/EMsk+ziYVa2ugY6NGi7WCQ8ZcwtGA7WVPybJ8AUCyTsWbYwy0GjEl521HS7AzC974WgMgSgk2wOQlyNbZh9Qlnqu/P6VbwqEBflTd7swgrhaU/oNafAw266LNx/JbZLDiR1ucA/JV6cEw4rV4mGM+u1FcI7xEvi1fsh8YVxgbhHG4Ha+wWgqb1HLSHwQvMxL24FJdFUK+RzSCzbxqVfBrq/XmlHQPfEYXB9539zyg1BmB2y5JTYQztcFfEfLiD11AzKcnVOt/NRate3TFFi7MBgrrMIXEookDUBJ6RuHwYv2yW3vE2MvC63z1INR4MyGpOByLUSenp1BtnQSWLCgI6Gbn1TOTlRs7DmP1wdGaGKBmKmOQB5Y0ZUhdRnC1q6gc3V6xP8v6DLxb57tvfpXrneE/hb8/CVpQf8wGMphEUfV4k3yyXbeayaLHuYzh1WOUuoTdzy8A+9FqxCAQ7PDVTAha4yliQAD+AbKIojKsIxyoVtH2A5EA2RtTHFW7xOAADt9WbW76qbYL8hnkqB7liwD5BvB6EyfAUrcgH8wlmW6ZwAZwINR/PFTPltT8JAMuxEMiS/AXmSx5MQVsAO53EhFt0="
     app_path: "app/build/outputs/apk/debug/app-debug.apk"
 
 android:
@@ -53,6 +53,5 @@ jobs:
       name: "Build"
       install:
         - ./gradlew clean assembleDebug
-
       script:
         - node ./AppiumTests/index.js
