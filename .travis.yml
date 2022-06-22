@@ -30,8 +30,7 @@ before_install:
   - wget https://github.com/sormuras/bach/raw/master/install-jdk.sh
   - chmod +x $TRAVIS_BUILD_DIR/install-jdk.sh
   - export JAVA_HOME=$HOME/openjdk14
-  - $TRAVIS_BUILD_DIR/install-j
-  - dk.sh -F 14 --target $JAVA_HOME
+  - $TRAVIS_BUILD_DIR/install-jdk.sh -F 14 --target $JAVA_HOME
   - sudo apt-get install nodejs
   - sudo ln -s "$(which nodejs)" /usr/bin/node
 
