@@ -13,15 +13,15 @@ addons:
       secure: "E1B6hSAaWiLU/06IArFDlGpjrCd1NCX7vVtp4eVZw0xc3N0yei9+DJQGu6OwbVZyX8F44dxA691vOvno8fgnoabkAyjzQsE7HhSrMijLZpytHo+mtD+GQeplS/fqUxcLDEDZt/TuQM8NfG6sF3Nw5WNIcdb3EHQmbwzxveo93wRjUWalc1Bj9x/5uhE/5CEEDqhGKsxkmUbxzHlBCM5XKUOaLgp1C5bJWHnLzbs7MYhPYE32f4zf2z4gKdOx+ZQYmvm8YBv3XYipph92AEqVpKetoqNR+AAPFB/GwvTiLnqCOi5JU+QkyFyS2VImCWOVeURAKpat3CxHRB7B31W7CmzKygJCVrg60sAlVddwEngKamA0ylT9xRLp4ME/FKPP2SV8jfa/HdBmlV8sEK29swg4ib85/YoG1bHBkrlEJuhjtpEfCDZO8fcSFLhKEDF7sK6d56AhT9OJ3J6LShupPEiY42P/uwgtxQSuhkxVW2jskbW3C2qMCxXCyCSvd0luO9lONWYLfS1zWNholY1HNgvztSP2+j9ANStBfU0SihM4CvcfNMW3ADzf06YxrJCl4tCJj5rDCh5aAlZHEWnYFFyBritV8HyRrzJkV0WvuhWI86ABZVHfmjrOlHtMnD5kBPMMNLYqYg7qJizvkeFJRQnCnh5SFlo8siaEeVTSYE8="
     app_path: "app/build/outputs/apk/debug/app-debug.apk"
 
-android:
-  licenses:
-    - 'android-sdk-preview-license-.+'
-    - 'android-sdk-license-.+'
-    - 'google-gdk-license-.+'
-  components:
-    - tools
-    - build-tools-30.0.2
-    - android-30
+#android:
+#  licenses:
+#    - 'android-sdk-preview-license-.+'
+#    - 'android-sdk-license-.+'
+#    - 'google-gdk-license-.+'
+#  components:
+#    - tools
+#    - build-tools-30.0.2
+#    - android-30
 
 before_install:
 #  - chmod +x gradlew
@@ -31,9 +31,9 @@ before_install:
 #  - chmod +x $TRAVIS_BUILD_DIR/install-jdk.sh
 #  - export JAVA_HOME=$HOME/openjdk14
 #  - $TRAVIS_BUILD_DIR/install-jdk.sh -F 14 --target $JAVA_HOME
-  - npm install -g n
-  - n 18.3.0
-  - sudo ln -s "$(which nodejs)" /usr/bin/node
+#  - npm install -g n
+#  - n 18.3.0
+#  - sudo ln -s "$(which nodejs)" /usr/bin/node
   - node -v
 
 jobs:
