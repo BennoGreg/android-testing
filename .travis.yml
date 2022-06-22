@@ -35,16 +35,16 @@ before_install:
 
 jobs:
   include:
-    - stage: test
-      name: "Unit Tests"
-      script:
-        - ./gradlew test
-    - script:
-        - echo "Entering Integration Testing"
-      name: "Integration Tests"
-    - script:
-        - echo "Entering UI-Testing"
-      name: "UI Tests"
+#    - stage: test
+#      name: "Unit Tests"
+#      script:
+#        - ./gradlew test
+#    - script:
+#        - echo "Entering Integration Testing"
+#      name: "Integration Tests"
+#    - script:
+#        - echo "Entering UI-Testing"
+#      name: "UI Tests"
     - stage: build
       name: "Build"
       install:
