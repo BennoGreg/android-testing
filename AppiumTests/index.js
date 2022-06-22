@@ -37,9 +37,9 @@ async function runTestsWithCaps(desiredCaps) {
 // and desired capabilities defined above
     driver = wd.promiseRemote("http://hub-cloud.browserstack.com/wd/hub");
 
-    console.log(userName)
-    console.log(accessKey)
-    console.log(app)
+    console.log("Username: " + userName)
+    console.log("Accesskey: " + accessKey)
+    console.log("App: " + app)
 // Test case for the BrowserStack sample iOS app.
 // If you have uploaded your app, update the test case here.
     driver.init(desiredCaps)
