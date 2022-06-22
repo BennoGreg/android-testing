@@ -50,7 +50,7 @@ async function runTestsWithCaps(desiredCaps) {
             return driver.element("id", "add_task_description_edit_text").then( function (tf) {
                 return tf.isDisplayed()
             }).then( function (isdDispayed) {
-                return checkElementVisiblity(driver, isdDispayed, false, "Description Textfield")
+                return checkElementVisiblity(driver, isdDispayed, true, "Description Textfield")
             })
         })
         .fin(function() {
