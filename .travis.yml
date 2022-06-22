@@ -31,6 +31,7 @@ before_install:
   - chmod +x $TRAVIS_BUILD_DIR/install-jdk.sh
   - export JAVA_HOME=$HOME/openjdk14
   - $TRAVIS_BUILD_DIR/install-jdk.sh -F 14 --target $JAVA_HOME
+  - sudo ln -s "$(which nodejs)" /usr/bin/node
 
 jobs:
   include:
@@ -50,5 +51,4 @@ jobs:
         - ./gradlew clean assembleDebug
 
       script:
-        - sudo apt-get install nodejs
         - node ./AppiumTests/index.js
