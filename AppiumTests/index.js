@@ -21,17 +21,6 @@ const capabilities1 = {
     'name': 'single_test Pixel 3'
 }
 
-const capabilities2 = {
-    'browserstack.user' : userName,
-    'browserstack.key' : accessKey,
-    'build' : 'browserstack-build-1',
-    'name': 'single_test Galaxy S10',
-    'device' : 'Samsung Galaxy S10e',
-    'os_version': '9.0',
-    'app' : app,
-    'browserstack.debug' : true
-};
-
 async function runTestsWithCaps(desiredCaps) {
     // Initialize the remote Webdriver using BrowserStack remote URL
 // and desired capabilities defined above
@@ -80,4 +69,3 @@ function checkElementVisiblity(driver ,actual, expected, element) {
 }
 
 runTestsWithCaps(capabilities1)
-runTestsWithCaps(capabilities2)
