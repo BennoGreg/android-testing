@@ -2,6 +2,7 @@
 *.iml
 local.properties
 build
+!AppiumTests/node_modules/wd/build/
 .gradle
 # Eclipse project files
 .project
