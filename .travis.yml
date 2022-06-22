@@ -35,8 +35,8 @@ before_install:
 #  - n 18.3.0
 #  - sudo ln -s "$(which nodejs)" /usr/bin/node
   - curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-  - sudo apt install nodejs
-  - nodejs -v
+  - sudo apt install node
+  - node -v
 
 jobs:
   include:
