@@ -26,7 +26,6 @@ android:
 before_install:
   - chmod +x gradlew
   - yes | sdkmanager "platforms;android-30"
-
   - wget https://github.com/sormuras/bach/raw/master/install-jdk.sh
   - chmod +x $TRAVIS_BUILD_DIR/install-jdk.sh
   - export JAVA_HOME=$HOME/openjdk14
@@ -34,8 +33,6 @@ before_install:
   - wget https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh
   - bash install.sh
   - nvm install 16
-  - nvm list
-  - node -v
 
 jobs:
   include:
