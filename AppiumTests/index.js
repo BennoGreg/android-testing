@@ -4,8 +4,6 @@ userName = process.env.BROWSERSTACK_USERNAME
 accessKey = process.env.BROWSERSTACK_ACCESS_KEY
 app = process.env.BROWSERSTACK_APP_ID
 
-
-
 const capabilities1 = {
     // Set your BrowserStack access credentials
     'browserstack.user' : userName,
@@ -23,14 +21,10 @@ const capabilities1 = {
 
 async function runTestsWithCaps(desiredCaps) {
     // Initialize the remote Webdriver using BrowserStack remote URL
-// and desired capabilities defined above
+    // and desired capabilities defined above
     driver = wd.promiseRemote("http://hub-cloud.browserstack.com/wd/hub");
-
-    console.log("Username: " + userName)
-    console.log("Accesskey: " + accessKey)
-    console.log("App: " + app)
-// Test case for the BrowserStack sample iOS app.
-// If you have uploaded your app, update the test case here.
+    // Test case for the BrowserStack sample iOS app.
+    // If you have uploaded your app, update the test case here.
     driver.init(desiredCaps)
         //Write your custom code here
         .then(function (){
@@ -42,8 +36,8 @@ async function runTestsWithCaps(desiredCaps) {
         .then( function () {
             return driver.element("id","add_task_title_edit_text").then( function (tf) {
                 return tf.isDisplayed()
-            }).then( function (isdDispayed) {
-                return checkElementVisiblity(driver, isdDispayed, true, "Title Textfield")
+            }).then( function (isDispayed) {
+                return checkElementVisiblity(driver, isDispayed, true, "Title Textfield")
             })
         })
         .then( function() {
